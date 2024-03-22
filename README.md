@@ -1,17 +1,22 @@
 # Olympic_Medals_Analysis
 
+
 _NOTE:_ There is no information about athletes for team competitions that consist of more than 2 participants. Only team records.
+
 _NOTE:_ There are no results for qualification rounds. For instance, event 100-m men contains only final results without semi-finals and other hits.
+
 
 **Introduction to Study:**
 
 The 2024 Olympics known as Paris 2024 is scheduled to take place from July 26 to Aug 11. The Olympic Games are a very popular, multicultural celebration to share in the world of sports and so much more. As there have been many changes and modifications to the Olympics, the focus of this study is to identify trends in the performance of countries over time. After the Exploratory Data Analysis (EDA), I will be utilizing the total awarded medals from the Olympics to predict how the top-performing countries might perform in the future Olympics, notably this upcoming 2024 Olympics. My hypothesis for this study is that the accumulation of previous medals correlates with an increased potential for winning an equal or greater amount of medals in the future Olympic Games. 
 
-**Process and Challenges: **
+
+**Process and Challenges:**
 
 Initially, the three datasets (athletes, hosts, medals) are merged to form olympic_data, containing around 17,000 rows of data. It was then cleaned by removing a column that had more than 20% null values. Some important variables that I did most of this study with are medal_type (gold, silver, or bronze), game_season (Winter or Summer), game_year, athlete_year_birth, discipline_title (the overall discipline groups), country_name, athlete_full_name. These variables allowed me to create functions and visualizations that would showcase the performance of the countries and how their athletes and medals correlate with their success in the Olympics. It was followed by examining the data in the discipline_title and country_names and renaming the data with a class map. 
  
 Throughout this study, I encountered challenges in effectively presenting the data in a comprehensible manner. After finishing the EDA, I created a function called plot_heatmap that would display a green box (discipline played) or white box (discipline not played) with the rows containing the disciplines and the columns containing the years. It shows the common appearances of the disciplines over the years in the Olympics. Another important function is plot_trends, which would generate a bar chart of the country’s medals (gold, silver, bronze, or all) and the season (Summer, Winter, or both). It provided a more individualized overview of the country as well as the trend of the medals won at the Olympics. Another issue arose due to my limited experience in handling time series datasets, so I had to research to familiarize myself with the necessary techniques. I then encountered difficulties integrating the prediction models with my dataset as my preprocessing methods didn’t complement each other. After careful debugging, it successfully predicted 4 Olympic Games (2024 2026, 2028, 2030).
+
 
 **Observations and Interpretations:**
 
@@ -22,6 +27,7 @@ Due to the Olympics's separation of the Summer and Winter seasons, each season w
 From the graph ‘Number of ALL Medals Won by China during Both Seasons’, it can be seen that they had never gotten an Olympic medal until the 1984 Olympics. As mentioned earlier about the lesser competition during the Olympics, China was able to make its mark. This could have been a way where ‘success breeds success’. There could have been a late 20th century reform in the government and they might have had a shift in their investments after winning around 25 medals in the Olympics. They have then a strategic focus on certain key sports, where they have been known as a powerhouse in those sports. Some notable ones would be table tennis. Their concentrated efforts continue to maximize its medal-winning potential through talent identification as China strengthens its already winning disciplines. 
     
 When looking at the median athlete year of birth from this dataset, it shows that they were born in the years 1991 to 1996. So, I took a look at the newer generation of Olympic athletes that were born after 1996, which puts their ages around 25 years old. There was also a calculation and display of how many medals these young athletes won and how many were gold medals. The results revealed that most if not all of the medals they won were gold medals. This shows that young athletes have lots of potential and success from their early specialization in particular disciplines. They must have had better teaching, training techniques, and training equipment which exponentially increases the number of young athletes competing at the highest level. Not only that but also mentioned earlier, the young athletes are also prioritizing their country’s top disciplines. For example, both Katie Ledecky and Robert Finke are in swimming, which is USA’s second top discipline. 
+
 
 **Conclusion:**
 
